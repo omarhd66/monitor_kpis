@@ -1,6 +1,6 @@
 # monitor_kpis
-pis
-This code diplay nicely kpis graphs
+
+# This code diplay nicely kpis graphs
 
 The kpis are collected remotly from oracle database and stored in a dataframe
 
@@ -10,7 +10,7 @@ in this exemple there are two type of servers, serverA and serverB. there are tw
 
 the script dosn't have a hardcoded services, it dosn't know in advance how many service a server have, it looks itseft for this info on the colum SERV_NAME and then for each service and for each kpi plot a graph
 
-the table below shows the dependencies
+# the table below shows the dependencies
 
 
 ![image](https://user-images.githubusercontent.com/30199904/136044609-c150ef91-d9ff-4e4e-aacb-6c268c2d5835.png)
