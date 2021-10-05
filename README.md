@@ -13,7 +13,7 @@ the script dosn't have a hardcoded services, it dosn't know in advance how many 
 the table below shows the dependencies
 
 
-![image](https://user-images.githubusercontent.com/30199904/136043934-80cac9c3-dffc-4555-9b1c-9c741cc6841a.png)
+![image](https://user-images.githubusercontent.com/30199904/136044609-c150ef91-d9ff-4e4e-aacb-6c268c2d5835.png)
 
 ![image](https://user-images.githubusercontent.com/30199904/136042333-26b26a36-649b-4fe7-a78a-da848b18a6d8.png)
 
