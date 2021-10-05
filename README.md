@@ -15,6 +15,28 @@ the script dosn't have a hardcoded services, it dosn't know in advance how many 
 
 ![image](https://user-images.githubusercontent.com/30199904/136044609-c150ef91-d9ff-4e4e-aacb-6c268c2d5835.png)
 
+
+You call this by the following commands :
+
+%matplotlib notebook
+
+from Display_kpis import Display_kpis as kpis
+
+kpis.desplay_kpis(['serverA','serverB'],'2021-10-03 00:00:00')
+
+if you are interssed only by one server type :
+
+kpis.desplay_kpis(['serverA'],'2021-10-03 00:00:00')
+
+Or if you want only display kpi of one server, you have just to mention that on the function :
+
+kpis.desplay_kpis(['serverB_80'],'2021-10-03 00:00:00')
+
+You can also specify some servers you want to display, like this :
+
+kpis.desplay_kpis(['serverB_80', 'serverA_1'],'2021-10-03 00:00:00')
+
+
 ![image](https://user-images.githubusercontent.com/30199904/136042333-26b26a36-649b-4fe7-a78a-da848b18a6d8.png)
 
 ![image](https://user-images.githubusercontent.com/30199904/136042412-80465809-754e-42c2-a0f5-cf1c6904d9c8.png)
