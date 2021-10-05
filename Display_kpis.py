@@ -9,7 +9,7 @@ class Display_kpis:
         
         from Collect_data_from_db import Collect_data_from_db as db_rq
         
-        #df1 = db_rq.collect_data_from_db(users,from_date)
+        df1 = db_rq.collect_data_from_db(users,from_date)
 
         disp_clos=db_rq.disp_kpis()
         
@@ -17,10 +17,7 @@ class Display_kpis:
 
         df1[x_time] = pd.to_datetime(df1[x_time])
         df1.sort_values(x_time, inplace=True)
-        #list(dict.fromkeys(df1['APP_NAME']))   
-        #['cs_olc1_1.101-olc', 'cs_olc3_1.103-olc', 'cs_phub1_3.71-phub80', 'cs_phub2_3.72-phub90','cs_phub2_3.72-phub70']
         app_name = list(dict.fromkeys(df1['APP_NAME']))
-        #service_names = list(dict.fromkeys(df1['SERV_NAME']))  #['DCC_PCC_PCRF-OLC', 'DCC_PCC_OCS-OLC', 'DCC-OLC', 'CC-OLC']
         #['PCC_serverB-serverA', 'PCC_serverC-serverA', 'DCC-serverA', 'CC-serverA']
         n_kpi=len(disp_clos)
         #n_s=len(service_names)
@@ -40,17 +37,9 @@ class Display_kpis:
                 service_names = list(dict.fromkeys( df1[df1['APP_NAME']==app]['SERV_NAME']))
                 for serv in service_names:
                     yy=pd.to_numeric(df1[(df1['SERV_NAME']==serv) & (df1['APP_NAME']==app)][n])
-                    xx=df1[(df1['SERV_NAME']==serv) & (df1['APP_NAME']==app)][x_time]                    
-                    #if "olc" in app:
-                        #appp, ccc =app.split('.', 1)
-                    #if "phub" in app:
-                        #lista=[]
-                        #lista = app.split('_')
-                        #appp= app#lista#[1]+"_"+lista[2][-2:]                   
+                    xx=df1[(df1['SERV_NAME']==serv) & (df1['APP_NAME']==app)][x_time]                                    
                     plt.plot(xx,yy, label=app+" "+serv)
                     mplcursors.cursor(multiple=False, highlight=False, hover=False)
-                    #cursor.connect("add", lambda sel: sel.annotation.set_text('x={},y={}'.format(sel.target[0], sel.target[1])))
-                    #serv_print= serv_print+" "+appp+"   "+serv
                 plt.legend(loc = "upper left", prop={'size': 6})        
             axs.set_title(n, size=8)
             #plt.gcf().autofmt_xdate(rotation=10)
