@@ -1,6 +1,6 @@
 # monitor_kpis
 
-# This code diplay nicely kpis graphs
+# This code diplay nicely KPI graphs
 
 The kpis are collected remotly from oracle database and stored in a dataframe
 
